@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+:root {
+  /* Glow Corner brand palette */
+  --color-deep-rose: #916B61;
+  --color-warm-mauve: #C79A8B;
+  --color-soft-blush: #E8C9BD;
+  --color-cream-shell: #F7EBE5;
+  --color-warm-off-white: #F7EBE5;
+  --color-golden: #B8860B;
+  --color-golden-light: #D4AF37;
+  --background: var(--color-soft-blush);
+  --foreground: var(--color-deep-rose);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-deep-rose: #916B61;
+  --color-warm-mauve: #C79A8B;
+  --color-soft-blush: #E8C9BD;
+  --color-cream-shell: #F7EBE5;
+  --color-warm-off-white: #F7EBE5;
+  --color-golden: #B8860B;
+  --color-golden-light: #D4AF37;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-serif: var(--font-cormorant);
+  --animate-fade-in-up: fade-in-up 0.8s ease-out forwards;
+  --animate-shimmer: shimmer 3s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes logo-glow {
+  from, to {
+    filter: drop-shadow(0 0 0 transparent);
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(184, 134, 11, 0.4));
+  }
+}
+
+.logo-shimmer {
+  background: linear-gradient(
+    110deg,
+    #b8860b 0%,
+    #d4af37 25%,
+    #b8860b 50%,
+    #d4af37 75%,
+    #b8860b 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Soft focus states */
+*:focus-visible {
+  outline: 2px solid var(--color-warm-mauve);
+  outline-offset: 2px;
+}
