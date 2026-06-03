@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SocialLinks } from "./SocialLinks";
 
 const footerLinks = {
   Shop: [
@@ -33,6 +34,8 @@ export function Footer() {
             <p className="mt-2 text-sm opacity-90">
               Soft, premium skincare for natural beauty.
             </p>
+            <p className="mt-4 text-sm font-medium">Follow us</p>
+            <SocialLinks className="mt-2 flex gap-2" />
           </div>
           {Object.entries(footerLinks).map(([heading, links]) => (
             <div key={heading}>

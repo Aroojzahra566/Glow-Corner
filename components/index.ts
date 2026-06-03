@@ -8,6 +8,7 @@ export { Button } from "./Button";
 export { TrustCard } from "./TrustCard";
 export { ProductCard } from "./ProductCard";
 export { Footer } from "./Footer";
+export { SocialLinks } from "./SocialLinks";
 export { FadeInSection } from "./FadeInSection";
 export { StarRating } from "./StarRating";
 export { HeroCarousel } from "./HeroCarousel";
